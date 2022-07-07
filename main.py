@@ -17,13 +17,8 @@ def index():
     if request.get_method == 'POST':
         file = request.files['file']
         return f'Uploaded: {file.filename}'
-    return render_template('base.html')
+    return render_template('home.html')
 
-@app.route('/crpdf', methods=['GET', 'POST'])
-def crpdf():
-    if request.get_method == 'POST':
-        file = request.files['file']
-        today = datetime.date.today()
 
 today = datetime.date.today()
 oneday = datetime.timedelta(days=1)
