@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{url_for('home')}}">SSPM_PROJECT</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('daydate')}}">Calendar<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('choose_template')}}">Templates</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('search')}}">Search Date</a>
+            </li>
+            <div class="btn-group">
+                <button type="button" class="btn btn-light" id="dropdownMenuLink"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Create Event
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item"
+                        href="https://sandbox.getindico.io/login/?next=%2F%23create-event%3Alecture">Lecture</a>
+                    <a class="dropdown-item"
+                        href="https://sandbox.getindico.io/login/?next=%2F%23create-event%3Ameeting">Meeting</a>
+                    <a class="dropdown-item"
+                        href="https://sandbox.getindico.io/login/?next=%2F%23create-event%3Aconference">Conference</a>
+                </div>
+            </div>
+            
+            <!-- <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" id="dropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        View
+                    </button>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/category/0/upcoming">Upcoming event</a>
+                        <a class="dropdown-item" href="/category/0/overview?period=day">Today's events</a>
+                        <a class="dropdown-item" href="category/0/overview?period=week">Week's events</a>
+                    </div>
+                </div> -->
+
+
+
+        </ul>
+    </div>
+
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
