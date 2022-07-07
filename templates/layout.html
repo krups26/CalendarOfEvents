@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="notice list">Notice Layout:</label>
+        <select name="notice" id="notice">
+            <option value="daa">DAA</option> <a href=""></a>
+            <option value="dbs">DBS</option> <a href=""></a>
+            <option value="dcs">DCS</option> <a href=""></a>
+            <option value="dhep">DHEP</option> <a href="">DHEP</a>
+            <option value="dnmp">DNMP</option> <a href=""></a>
+            <option value="dtp">DTP</option> <a href=""></a>
+            <option value="wednesday">Wednesday Colloquium</option> <a href="">Aset</a>
+            <option value="aset">Aset Colloquium</option> <a href=""></a>
+            <!-- <option value="audi">Wednesday Colloquium</option>
+                <option value="audi">Wednesday Colloquium</option>
+                <option value="audi">Wednesday Colloquium</option> -->
+        </select>
+        <button class="GFG" onclick="window.location.href ='aset.py'">
+            Print
+        </button>
+
+    </form>
+
+
+</body>
+
+</html>
+
+{% endblock %}
