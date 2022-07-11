@@ -12,6 +12,10 @@ import pdfkit
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET', 'POST'])
+def home ():
+    return render_template('home.html')
+
 @app.route('/print_template', methods=['GET', 'POST'])
 def index():
    # if request.get_method == 'POST':
@@ -154,7 +158,7 @@ def index():
     body=body.replace('MAIN_ORGANIZER',data['results'][0]['organizer'])
     body=body.replace('MAIN_URL',data['results'][0]['url'])
 
-    pdfkit.from_string(body, 'Sm.pdf') #with --page-size=Legal and --orientation=Landscape
+    pdfkit.from_string(body, 'SK.pdf') #with --page-size=Legal and --orientation=Landscape
 
 
 @app.route('/search')
@@ -169,9 +173,6 @@ def daydate():
 def choose_template():
     return render_template('choose_template.html')
 
-@app.route('/home')
-def home():
-    return render_template('home.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
